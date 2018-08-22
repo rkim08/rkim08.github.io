@@ -1,0 +1,138 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link type = "text/css" rel = "stylesheet" href = "../style/css/style.css"/>
+		<title>Rachel Kim</title>
+		<header>
+			<a href = "index.html">Home</a>
+			<a href = "about.html">About Me</a>
+			<a href = "contact.html">Contact Me</a>
+		</header>
+			<h1>Contact Me! </h1>
+	</head>
+	<body>
+
+		<div id="message">
+			<h5> Feel free to contact me for more information or comments about the
+				website!
+			</h5>
+
+		</div>
+
+	<br>
+
+
+		<div id= "contact">
+			<form id = "contact" name="contact" action = "mailto:rachelk1308@gmail.com" method="POST">
+				<label for="firstname">First Name</label>
+				<input type="text" id="firstname" name="firstname" placeholder="Your name...">
+				<label for="lastname">Last Name</label>
+				<input type="text" id="lastname" name="lastname" placeholder="Your last name...">
+			<br>
+		<br>
+			<label for="email">Email</label>
+			<input type = "text" id="email" name="email" placeholder="Email" style="width:360px">
+			<br>
+		<br>
+				<label for="subject">Subject</label>
+				<input type= "text" id="subject" name="subject" placeholder="Subject" style="width:360px">
+			<br>
+		<br>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" placeholder="Write message here..." style="width:355px"></textarea>
+			<br>
+			<br>
+				<input type= "submit" value= "submit">
+			</form>
+		<br>
+		</div>
+
+		<footer>
+			<a href = "index.html">Home</a>
+			<a href = "about.html">About Me</a>
+			<a href = "contact.html">Contact Me</a>
+		</footer>
+
+		<script src="static/js/script1.js"></script>
+	</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../style/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title>Summer Project</title>
+
+	</head>
+	<body>
+		<div class="everything">
+			<div class="navi">
+				<div class="container-fluid col-xs-12" >
+				<nav class="navbar navbar-dark navbar-expand-lg">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+					<div class="collapse navbar-collapse" id="navbarToggler">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About Me</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+					</ul>
+					</div>
+					</nav>
+				</div>
+			</div>
+			<form>
+		  <div class="form-group">
+		    <label for="exampleFormControlInput1">Email address</label>
+		    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlSelect1">Example select</label>
+		    <select class="form-control" id="exampleFormControlSelect1">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlSelect2">Example multiple select</label>
+		    <select multiple class="form-control" id="exampleFormControlSelect2">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlTextarea1">Example textarea</label>
+		    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		  </div>
+
+			<div class="form-group">
+				<button type="button" class="btn btn-light">Submit</button>
+		</form>
+		</div>
+		<script type="text/javascript">
+		
+		</script>
+	</body>
+</html

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../style/css/style.css"/>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<script type="text/javascript" src="js/paper.js"></script>
+  <title>Summer Project</title>
+
+
+  <style type="text/css">
+  html, body, .everything1{
+    height: 100%;
+    margin: 0;
+  }
+
+  #welcome h1{
+    font-size: 200px;
+    justify-content: center;
+    text-align: center;
+    height: 10em;
+  }
+  </style>
+
+  <script type="text/javascript">
+    window.onload = function() {
+  		// Get a reference to the canvas object
+  		var canvas = document.getElementById('myCanvas');
+  		// Create an empty project and a view for the canvas:
+  		paper.setup(canvas);
+  		// Create a Paper.js Path to draw a line into it:
+  		var path = new paper.Path();
+  		// Give the stroke a color
+  		path.strokeColor = 'black';
+  		var start = new paper.Point(100, 100);
+  		// Move to start and draw a line from there
+  		path.moveTo(start);
+  		// Note that the plus operator on Point objects does not work
+  		// in JavaScript. Instead, we need to call the add() function:
+  		path.lineTo(start.add([ 200, -50 ]));
+  		// Draw the view now:
+  		paper.view.draw();
+
+    var path = new Path.Rectangle({
+  	point: [75, 75],
+  	size: [75, 75],
+  	strokeColor: 'black'
+    });
+
+    function onFrame(event) {
+    	// Each frame, rotate the path by 3 degrees:
+    	path.rotate(3);
+    };
+  };
+  </script>
+
+</head>
+<body>
+  <div class="everything1">
+    <div class="navi">
+      <div class="container-fluid col-xs-12" >
+      <nav class="navbar navbar-dark navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li> -->
+        </ul>
+        </div>
+        </nav>
+      </div>
+    </div>
+
+
+    <div id="welcome">
+      <h1 style="font-style: italic">Welcome</h1>
+    </div>
+
+  <canvas id="myCanvas" width="750px" height="900px">
+
+  </canvas>
+  </div>
+
+</body>
+</html>
