@@ -6,21 +6,27 @@
   margin: 0px;
   padding: 0px;
   width: 100%;
-  clear: both;
+  color:black;
+  
 }
+
+.navi{
+  background-color:black;
+  color:black;
+}
+
 .navi a {
 	float: right;
-	color: white;
+	color: black;
 	text-align: center;
 	padding: 20px 15px;
 	font-size: 15px;
-  text-decoration:none;
 }
 
 .navi #logo {
   float: left;
   margin-left: 3%;
-  background-color: #0077C1;
+  background-color: black;
   font-size: 15px;
   width: 200px;
 }
@@ -28,25 +34,22 @@
 .navi a:hover {
 	background-color: #42A5F4;
   height: 100%:
+  color:black;
 }
 
 .navi a.active {
 	background-color: #42A5F4;
   height: 100%;
+  color:black;
 }
 
 
 .everything{
-  /* background-image:url("https://www.surfertoday.com/images/stories/beachquotes.jpg"); */
-
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #F7F7F7;
 }
-.navi{
-  background-color:	#003666;
-}
+
+/* message for pictures */
 .first {
   position: relative; /* define context for absolutly positioned children */
   /* size set by image in this case */
@@ -128,10 +131,3 @@ p1 {
 	font-weight: bold;
 	font-size: 40px;
 }
-/* p {
-	text-align: center;
-} */
-
-/* html{
-	background-color: ivory;
-} */

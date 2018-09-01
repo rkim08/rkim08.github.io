@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="../style/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../style/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,8 +15,8 @@
   html, body, .everything{
     height: 100%;
     margin: 0;
+    background-color: #F7F7F7;
   }
-
 
   #row h1{
     text-align: center;
@@ -70,16 +70,16 @@
     </div>
 
 
-  <div class="content" style="width:100%; text-align:center;">
+  <div class="content" style="width:80%; text-align:center; margin: auto;overflow: auto;">
     <div id="row">
       <h1> Welcome </h1>
     </div>
-    <div id="work" style="display:flex; flex-direction:column; width:100%;">
+    <div id="work" style="display:flex; flex-direction:column; ">
       <h1> Work </h1>
       <p>Below are some descriptions of projects that I have worked on throughout
         the past couple of years! </p>
     </div>
-    <div id="projects" style="margin:10px; width:80%;">
+    <div id="projects" style="margin:10px; ">
       <a href="error.html">
       <div class = "first">
         <img id = "maps" src="../images/maps.jpg" alt="maps" width="320px" height="300px"/>
