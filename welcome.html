@@ -100,58 +100,27 @@
     </h1> -->
 
   <script type="javascript/script.js">
-  //   window.onload = function() {
-  //    // Get a reference to the canvas object
-  //    var canvas = document.getElementById('myCanvas');
-  //    // Create an empty project and a view for the canvas:
-  //    paper.setup(canvas);
-  //    // Create a Paper.js Path to draw a line into it:
-  //    var path = new paper.Path();
-  //    // Give the stroke a color
-  //    path.strokeColor = 'black';
-  //    var start = new paper.Point(100, 100);
-  //    // Move to start and draw a line from there
-  //    path.moveTo(start);
-  //    // Note that the plus operator on Point objects does not work
-  //    // in JavaScript. Instead, we need to call the add() function:
-  //    path.lineTo(start.add([ 200, -50 ]));
-  //    // Draw the view now:
-  //    paper.view.draw();
 
-  //   var path = new Path.Rectangle({
-  //  point: [75, 75],
-  //  size: [75, 75],
-  //  strokeColor: 'black'
-  //   });
-
-  //   function onFrame(event) {
-  //    // Each frame, rotate the path by 3 degrees:
-  //    path.rotate(3);
-  //   };
-  // };
-
-  // Wrap every letter in a span
-  // Wrap every letter in a span
-$('.ml3').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml3 .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: function(el, i) {
-      return 150 * (i+1)
-    }
-  }).add({
-    targets: '.ml3',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
+  $('.ml3').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml3 .letter',
+      opacity: [0,1],
+      easing: "easeInOutQuad",
+      duration: 2250,
+      delay: function(el, i) {
+        return 150 * (i+1)
+      }
+    }).add({
+      targets: '.ml3',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
   </script>
 
   </div>
