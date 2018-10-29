@@ -5,15 +5,35 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-<script type="text/javascript" src="js/paper.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <title>Summer Project <img id = "logo" src="../images/logo.png" alt="logo"/></title>
 
+  <script type="javascript/script.js">
 
+  $('.ml3').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml3 .letter',
+      opacity: [0,1],
+      easing: "easeInOutQuad",
+      duration: 2250,
+      delay: function(el, i) {
+        return 150 * (i+1)
+      }
+    }).add({
+      targets: '.ml3',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  </script>
   <style type="text/css">
   /*html, body, .everything1{
     height: 100%;
@@ -64,61 +84,6 @@
 }
   </style>
 
-  <script type="text/javascript">
-  //   window.onload = function() {
-  // 		// Get a reference to the canvas object
-  // 		var canvas = document.getElementById('myCanvas');
-  // 		// Create an empty project and a view for the canvas:
-  // 		paper.setup(canvas);
-  // 		// Create a Paper.js Path to draw a line into it:
-  // 		var path = new paper.Path();
-  // 		// Give the stroke a color
-  // 		path.strokeColor = 'black';
-  // 		var start = new paper.Point(100, 100);
-  // 		// Move to start and draw a line from there
-  // 		path.moveTo(start);
-  // 		// Note that the plus operator on Point objects does not work
-  // 		// in JavaScript. Instead, we need to call the add() function:
-  // 		path.lineTo(start.add([ 200, -50 ]));
-  // 		// Draw the view now:
-  // 		paper.view.draw();
-
-  //   var path = new Path.Rectangle({
-  // 	point: [75, 75],
-  // 	size: [75, 75],
-  // 	strokeColor: 'black'
-  //   });
-
-  //   function onFrame(event) {
-  //   	// Each frame, rotate the path by 3 degrees:
-  //   	path.rotate(3);
-  //   };
-  // };
-
-  // Wrap every letter in a span
-  // Wrap every letter in a span
-$('.ml3').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml3 .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: function(el, i) {
-      return 150 * (i+1)
-    }
-  }).add({
-    targets: '.ml3',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-  </script>
-
 </head>
 <body>
   <div class="everything1">
@@ -155,6 +120,8 @@ anime.timeline({loop: true})
         <span class="letters">Hello Goodbye</span>
       </span>
     </h1> -->
+
+  
 
   </div>
 </body>
