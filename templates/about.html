@@ -1,167 +1,85 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="../style/css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../style/css/master.css"/>
 
-		<title>Rachel Kim</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <title>Rachel Kim <img id = "logo" src="../images/logo.png" alt="logo"/></title>
 
+  <style type="text/css">
+    /*.container-fluid{*/
+      /*position:absolute;
+      padding:20px;*/
+      /*top:10%;*/
+      /*transform: translate(-50%,-50%);*/
+   /* }*/
+    .picture{
+      position:absolute;
+      top:10%;
+      left:0%;
+      padding-left: 24px;
+      margin-top:21.44px;
+    }
+    .message{
+      position:absolute;
+      top:10%;
+      left:50%;
+      padding:0;
+    }
+    
+  </style>
 
-		<style type="text/css">
+</head>
+<body>
+  <div class= "container">
+    <nav>
+      <input type ="checkbox" id = "nav" class="hidden">
+      <label for="nav" class="nav-btn">
+        <i></i>
+        <i></i>
+        <i></i>
+      </label>
+      <div class="logo">
+        <a href = "../index.html"> Rachel </a>
+      </div>
+      <div class= "nav-wrapper">
+        <ul>
+          <li><a href = "../index.html">Home</a></li>
+          <li><a href = "../templates/projects.html">Projects</a></li>
+          <li><a href = "../templates/about.html">About Me </a></li> 
+        </ul>
+    </nav>
+  </div>
+ 
 
-		</style>
+    <div class="picture">
+      <img id="me" src="../images/tree.jpg" style="height:300px"/>
+      <h4>Contact</h4>
+      <p>Interested in learning more about my projects? Have any comments?</p>
+      <p>Feel free to shoot me a message at <strong>rkim08@berkeley.edu</strong></p>
+    </div>
+    <div class="message">
+      <h1>Traveler. Editor. Coder</h1>
+      <p>Hello! My name is Rachel Kim and I'm currently a 4th year at UC Berkeley! </p>
+      <p>I am majoring in Cognitive Science with an emphasis in Computational Modeling and a minor in Computer Science. I’m very passionate about technology, especially when it comes to design and presentation.  </p>
+      <p>I’ve developed a mastery in languages like Python, Java, HTML, CSS, Javascript, and Scratch. Aside from these languages, I have experience working with numerous others which include, but aren’t limited to, Django, Dark Sky, and Bootstrap. </p>
+      <p>I currently work as a coding instructor at ClassADoo, where I teach students from other countries how to code using HTML, CSS, Javascript, and Scratch. After working there for a couple of months, I was promoted from co-instructor to instructor, where I now teach on my own.</p>
+      <h4>Recent Project</h4>
+      <p>The most recent project I worked on was an application called Life as Someone Else (LAS). LAS is a platform that allows for professionals to provide realistic daily details of their work life by writing in diary entries. Students or nonworking individuals will be able to view these entries and gain a more personal perspective of the job. This project was created from scratch and utilized HTML, CSS, Javascript, and Django.</p>
+      <p>Check out the home page for more information on the projects that I worked on throughout the years!</p>
+      <h3>Skills</h3>
+      <p>What are some skills that I know? I now know how to use Adobe Photoshop, Illustrator, and XD. Other than those applications, I also know how to code in 
+        <li>Python </li>
+        <li>Java </li>
+        <li>HTML/CSS/Javascript</li>
+        <li>Scratch</li>
+      </p>
+      <p>But it doesn't end there! I have experience working with numerous other APIs in order to create a working application.</p>
+      <h4>Hobbies</h4>
+      <p>During my free time, some of the things I enjoy to do include playing squash, cooking, watching movies, editing, and taking pictures! To check out some of the pictures that I edited, scroll down below.</p>
+    </div>
+  <!-- </div> -->
+ 
 
-	</head>
-	<body>
-		<div class="everything1">
-			<div class="navi">
-				<div class="container-fluid col-xs-12" >
-					<nav class="navbar navbar-dark navbar-expand-lg">
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarToggler">
-							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-								<li class="nav-item">
-									<a class="nav-link" href="welcome.html">Home</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="index.html">Projects <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item active">
-									<a class="nav-link" href="about.html">About Me</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<div class="container-fluid" style="width:80%;">
-
-				<div id = "main">
-					<div id="frame">
-						<p>Nice to meet you!</p>
-					</div>
-					<div id = "introduction" style="">
-						<div id="firstrow" style="display:flex;">
-							<div id="picture" style="display:flex; flex-direction:column;">
-								<img id = "tree" src="../images/tree.jpg" alt="me" style="height:300px; align: left">
-								<div id="contact" style="margin-right: 30px;">
-									<p><p1> Contact</p1><p>
-									<p> Interested in learning more about my projects? Have any comments?<br>
-										Feel free to shoot me a message at <strong>rkim08@berkeley.edu</strong></p>
-								</div>
-							</div>
-							<div id="content" style=" display:flex;flex-direction:column;
-							margin-left:15px;">
-								<h1 style="text-align:center;">Traveler. Editor. Coder</h1><br>
-								<p>Hello! My name is Rachel Kim and I'm currently a 4th year at
-									UC Berkeley!</p>
-								<p> I am majoring in Cognitive Science and pursuing an emphasis in
-									Computational Modeling and minor in Computer Science. <br>
-									Some of the languages that I am aware of are Python, Java,
-									HTML, CSS, Javascript, and Scratch. Aside from these languages,
-									I have experience working with Django, Dark Sky, Bootstrap,
-									and more.
-
-									During my free time, some of the things I enjoy to do
-									include playing squash,cooking, watching movies, editing,
-									and taking pictures! To check out some of the pictures that I
-									edited, scroll down below.
-
-								</p>
-								<p> Aside from my hobbies, I am currently working two jobs.
-									During the school year, I work as a student-in-charge at
-									the circulation desk for the Bioscience and Natural Resources Library and
-									the Optometry Library.
-									All year around, I work as a coding instructor at ClassADoo, where I teach
-									students from other countries how to code using HTML, CSS, Javascript,
-									and Scratch. After working there for a couple of months, I was
-									promoted from co-instructor to instructor, where I now teach
-									on my own.
-								</p>
-								<p>
-								The most recent project I worked on was an application called
-								Life as Someone Else (LAS). LAS is a platform that allows for
-								professionals to provide realistic daily details of their work life
-								by writing in diary entries.
-								Students or nonworking individuals will be able to view these entries
-								and gain a more personal perspective of the job.
-								This project was created from scratch and utilized HTML, CSS, Javascript,
-								and Django.
-								</p>
-								<p>Check out the home page for more information on the projects
-								that I worked on throughout the years!</p>
-
-							</div>
-
-						</div>
-						<div id ="secondrow" style="display:flex; margin:10px;">
-
-							<div id="resume">
-								<h1 >Skills </h1>
-								<p> What are some skills that I know?
-									I now know how to use Adobe Photoshop, Illustrator, and XD.
-									Other than those applications, I also know how to code in
-								<span><ul>
-									<li> Python</li>
-									<li> Java</li>
-									<li> HTML/CSS/Javascript</li>
-									<li> Scratch </li>
-								</ul></span>
-								But it doesn't end there! I have experience working with other
-								APIs in order to create a working application.
-							</p>
-							</div>
-						<!-- <div id="secondrow" style="display:flex; flex-direction:column;">
-							<h1> Pictures! </h1>
-							<div id="work2" style="display:flex; flex-direction:row; flex-wrap:wrap; flex:1;">
-
-
-									<div id="korea" style="display:flex; flex-direction:row;flex:1;margin:10px; margin-left:0px;">
-										 <img id = "korea" src="../images/korea.jpg" style = "width=192px; height:128px"/>
-									</div>
-					       <div id="bread" style="display:flex; flex-direction:row; flex:1;margin:10px;">
-									  <img id = "bread" src="../images/bread.jpg" style = "width=192px; height:128px"/>
-								 </div>
-								 <div id="winter" style="display:flex; flex-direction:row; flex:1;margin:10px;">
-									 <img id = "winter" src="../images/winter.jpg" style = "width=192px; height:128px"/>
-								 </div>
-								 <div id="alone" style="display:flex; flex-direction:row;flex:1;margin:10px;">
-									 <img id = "alone" src="../images/alone.jpg" style = "width=192px; height:128px"/>
-								 </div>
-								 <div id="squash" style="display:flex; flex-direction:row; flex:1;margin:10px;">
-									 <img id = "squash" src="../images/squash.jpg" style = "width=192px; height:128px"/>
-								 </div>
-								<div id="tree" style="display:flex; flex-direction:row; flex:1;margin:10px;">
-									 <img id = "tree" src="../images/tree.jpg" style = "width=192px; height:128px"/>
-								</div>
-								<div id="flowers" style="display:flex; flex-direction:row; flex:1; margin-left:10px;">
-									<img id = "flowers" src="../images/flowers.jpg" style = "width=192px; height:128px"/>
-								</div>
-								<div id="burger" style="display:flex; flex-direction:row; flex:1;">
-									 <img id = "burger" src="../images/burger.jpg" style = "width=192px; height:128px"/>
-								</div>
-								<div id="road" style="display:flex; flex-direction:row; flex:1;">
-									<img id = "road" src="../images/road.jpg" style = "width=192px; height:128px"/>
-								</div>
-								<div id="android" style="display:flex; flex-direction:row; flex:1;">
-									<img id = "android" src="../images/android.jpg" style = "width=192px; height:128px"/>
-								</div>
-
-					      </div>
-					    </div> -->
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
 </body>
 </html>
