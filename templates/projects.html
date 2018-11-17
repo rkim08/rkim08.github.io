@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="../style/css/master.css"/>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <title>Rachel Kim <img id = "logo" src="../images/logo.png" alt="logo"/></title>
@@ -21,6 +22,10 @@
     .project1{
       margin-top: 40px;
     }
+
+    body{
+      min-width: 684px;
+    }
   </style>
 
 </head>
@@ -38,75 +43,94 @@
       </div>
       <div class= "nav-wrapper">
         <ul>
-          <li><a href = "../index.html">Home</a></li>
-          <li><a href = "../templates/projects.html">Projects</a></li>
-          <li><a href = "../templates/about.html">About Me </a></li> 
+          <li><a href = "../index.html" class="link">Home</a></li>
+          <li><a href = "../templates/projects.html" class="link">Projects</a></li>
+          <li><a href = "../templates/about.html" class="link">About Me </a></li> 
         </ul>
     </nav>
   </div>
   <div class="projects">
-    <div class="first project1">
-      <img id = "maps" src="../images/maps.jpg" alt="maps" style="width:80vw; height:300px"/>
-        <div class= "description">
-          <span> Bear Maps (Java) <br><br>
-            Back end of a webserver that uses real world mapping by combining
-            tile images and map features
+    <div class="first project1" style="width: 84vw; height:300px">
+      <img id = "maps" src="../images/road.jpg" alt="maps" style="width:83vw; height:300px"/>
+        <div class= "description" >
+          <span> Life as Someone - LAS (Django, HTML, CSS, Javascript) 
+            <ul>
+              <li>Platform that provides a personal and realistic view of professional's life.</li>
+              <li> Designed and constructed the website from ideation to implementation using Django as the primary backend server and HTML/CSS/Javscript for layout.
+              </li>
+            </ul> 
           </span>
         </div>
     </div>
 
 
 
-    <div class="first project2">
-      <img id = "website" src="../images/website.jpg" alt="website" style="width:80vw;height:300px"/>
+    <div class="first project2" style="width: 50vw;height:300px">
+      <img id = "website" src="../images/website.jpg" alt="website" style="width: 50vw;height:300px"/>
       <div class= "description">
-        <span> Website <br><br>
-          Created a website from scratch using HTML, CSS, Javascript
+        <span> Book Search Website (HTMl, API, CSS, Javascript) <br><br>
+          Implemented a book search website powered by utilizing a Google Books API. 
         </span>
       </div>
     </div>
 
-    <div class="first project3">
-      <img id = "lock" src="../images/lock.jpg" alt="lock" style="width:80vw; height:300px"/>
+    <div class="first project3" style="width:30vw; height:300px">
+      <img id = "lock" src="../images/lock.jpg" alt="lock" style="width:30vw; height:300px"/>
         <div class= "description">
           <span> Lock Manager (Java) <br><br>
-            Created an API that processes objects sequentially in a database that follows the logic for table and page level locking
+            Created an API that processes objects sequentially in a database that follows the logic for table and page level locking as well as unlocking.
           </span>
         </div>
     </div>
 
-     <div class="first project4">
-        <img id = "ants" src="../images/ants.png" alt="ants" style="width:80vw; height:300px"/>
+     <div class="first project4" style="width: 20vw; height:300px">
+        <img id = "ants" src="../images/ants.png" alt="ants" style="width:20vw; height:300px"/>
           <div class= "description">
             <span> Tower Defense game: Ants (Python) <br><br>
-              Combines functional and object-oriented programming pardigms
+              Combines functional and object-oriented programming pardigms essential for understanding and implementing programs. 
             </span>
           </div>
     </div>
 
-    <div class="first project5">
-        <img id = "scheme" src="../images/scheme.png" alt="scheme" style="width:80vw; height:300px"/>
+    <div class="first project5" style="width:60vw; height:300px">
+        <img id = "scheme" src="../images/scheme.png" alt="scheme" style="width:60vw; height:300px"/>
           <div class= "description">
             <span> Scheme (Python)<br> <br>
-            Designed and developed an interpreter for Scheme language
+            Designed and developed an interpreter for Scheme language primarily based on the Python language. 
             </span>
           </div>
     </div>
 
-    <div class="first project6">
-        <img id = "yelp" src="../images/yelp maps.png" alt="yelp" style="width:80vw; height:300px"/>
+    <div class="first project6" style="width:40vw; height:300px">
+      <img id = "maps" src="../images/maps.jpg" alt="maps" style="width:40vw; height:300px"/>
+        <div class= "description">
+          <span> Bear Maps (Java) 
+            <ul>
+              <li> Back end of a webserver that uses real world mapping by combining
+              tile images and map features. </li>
+              <li> Implemented a web API that parses through the URL and the parameters in order to generate the output via JSON.</li>
+          </ul>
+          </span>
+        </div>
+    </div>
+
+    <div class="first project7" style="width:40vw; height:300px">
+        <img id = "yelp" src="../images/yelp maps.png" alt="yelp" style="width:40vw; height:300px"/>
           <div class= "description">
-            <span>Maps (Python) <br> <br>
-            Finds the closest restuarants based on Yelp Database by using machine learning.
+            <span>Maps (Python)
+              <ul>
+                <li>Finds the closest restuarants based on Yelp Database through the implementation of machine learning. </li>
+                <li>Visualization (primarily through color) provides a predicted rating of the closest restaurant based on the given data. </li>
+              </ul>
           </span>
           </div>
     </div>
 
-    <div class="first project7">
-        <img id = "hog" src="../images/hog.jpg" alt="hog" style="width:80vw; height:300px"/>
+    <div class="first project8" style="width:83vw; height:300px">
+        <img id = "hog" src="../images/hog.jpg" alt="hog" style="width:84vw; height:300px"/>
           <div class= "description">
-            <span> Hog Dice Game in Python <br> <br>
-            A stimulator that computes strategies for the dice game.
+            <span> Hog Dice Game in Python <br> 
+            A stimulator that computes strategies for the dice game where the objective is to be the first player to obtain 100 points. 
             </span>
           </div>
     </div>

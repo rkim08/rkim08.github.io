@@ -40,7 +40,31 @@ nav {
       letter-spacing: 0px;
       text-decoration: none;
 }
- 
+.link li {
+  display: inline-block;
+}
+.link li a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+
+}
+
+.link::after {
+  content:"";
+  display:block;
+  width:0;
+  height:2px;
+  transition: width .3s;
+
+}
+
+.link:hover::after {
+  width:80%;
+  transition: width .3s;
+
+}
+
 nav ul {
       float: right;
 }
