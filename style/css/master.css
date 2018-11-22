@@ -55,12 +55,13 @@ nav {
   display:block;
   width:0;
   height:2px;
+  background:black;
   transition: width .3s;
 
 }
 
 .link:hover::after {
-  width:80%;
+  width:100%;
   transition: width .3s;
 
 }

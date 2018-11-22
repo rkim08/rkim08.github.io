@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
   <title>Rachel Kim <img id = "logo" src="../images/logo.png" alt="logo"/></title>
 
   <style type="text/css">
-    /*.container-fluid{*/
-      /*position:absolute;
-      padding:20px;*/
-      /*top:10%;*/
-      /*transform: translate(-50%,-50%);*/
-   /* }*/
+
     .picture{
       position:absolute;
       top:10%;
@@ -21,12 +20,20 @@
       padding-left: 24px;
       margin-top:21.44px;
     }
+
     .message{
       position:absolute;
       top:10%;
       left:50%;
       padding:0;
     }
+
+    .projects {
+      margin: 20px;
+      position:absolute;
+    }
+    
+
     
   </style>
 
@@ -52,13 +59,25 @@
     </nav>
   </div>
  
-
+  <div class="container1">
     <div class="picture" style="min-width: 40vw; max-width:45vw;">
-      <img id="me" src="../images/me.jpeg" style="min-width: 30vw; height:400px"/>
+      <div class="first project" style="width:100%">
+        <img id="me" src="../images/me.jpeg" style="min-width: 30vw; height:400px"/>
+        <div class="description">
+          <span>
+            <!-- GithubLink -->
+             <button style="font-size:24px" onclick ="javascript:document.location='https://github.com/rkim08?tab=repositories'"><i class='fab fa-github'></i></button>
+             <button style="font-size:24px" onclick ="javascript:document.location='https://www.linkedin.com/in/rachel-kim-7863b7158/'"><i class='fab fa-linkedin' style="color:#0077B5"></i></button>
+           </span>
+
+        </div>
+      </div>
+      
       <h4>Contact</h4>
       <p>Interested in learning more about my projects? Have any comments?</p>
       <p>Feel free to shoot me a message at <strong>rkim08@berkeley.edu</strong></p>
     </div>
+  </div>
     <div class="message" style="min-width: 40%; max-width:45vw;">
       <h1>Simple. Minimal. Modern.  </h1>
       <p>Hello! My name is Rachel Kim and I'm currently a 4th year at UC Berkeley! </p>
